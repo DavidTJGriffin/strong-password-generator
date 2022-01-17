@@ -9,7 +9,7 @@ var lowerCaseLetters = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'u', 'i', 'o', 'p', '
 
 var allCharacters = specialCharacters.concat(numbers, capitalLetters, lowerCaseLetters)
 
-// prompts for various password criteria
+// Password criteria
 var passwordPrompt = function () {
 
   function pickNumber() {
@@ -35,6 +35,7 @@ var passwordPrompt = function () {
     // special characters
     var specialPrompt = confirm('Do you want special characters in your password?');
 
+// if the user did not enter enough criteria for their password
     if (
       lowercasePrompt === false &&
       uppercasePrompt === false &&
@@ -44,9 +45,7 @@ var passwordPrompt = function () {
       chooseCriteria();
     };
   };
-
-
-  // if the user did not enter enough criteria for their password
+  chooseCriteria();
 
 }
 // Get references to the #generate element
