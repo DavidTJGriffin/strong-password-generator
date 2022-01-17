@@ -44,9 +44,25 @@ var passwordPrompt = function () {
       alert('You did not choose enough options, please choose at least one option!')
       chooseCriteria();
     };
+
+    var passwordChoices = {
+      lowercase: lowercasePrompt,
+      uppercase: uppercasePrompt,
+      numbers: numericPrompt,
+      special: specialPrompt,
+      length: lengthPrompt
+    };
   };
   chooseCriteria();
 
+}
+function generatePassword() {
+  var passwordChoices = passwordPrompt();
+
+
+
+
+  
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate')
