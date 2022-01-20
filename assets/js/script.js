@@ -38,7 +38,7 @@ function passwordPrompt() {
         alert('You did not choose enough options, please choose at least one option!')
         chooseCriteria();
       };
-  
+
       var passwordChoices = {
         lowercase: lowercasePrompt,
         uppercase: uppercasePrompt,
@@ -46,7 +46,7 @@ function passwordPrompt() {
         special: specialPrompt,
         length: lengthPrompt
       };
-      console.log(passwordChoices.length)
+
       // various password array combinations 
       var array;
       var array = []
@@ -65,66 +65,53 @@ function passwordPrompt() {
 
 
       function shuffle(array) {
-        let currentIndex = array.length,  randomIndex;
-      
+        let currentIndex = array.length, randomIndex;
+
         // While there remain elements to shuffle...
         while (currentIndex != 0) {
-      
+
           // Pick a remaining element...
           randomIndex = Math.floor(Math.random() * currentIndex);
           currentIndex--;
-      
+
           // And swap it with the current element.
           [array[currentIndex], array[randomIndex]] = [
             array[randomIndex], array[currentIndex]];
         }
-      
+
         return array;
       }
-      
+
       // Used like so
-      
+
       shuffle(array);
-      array.length = lengthPrompt 
+      array.length = lengthPrompt
 
-      console.log(array);
 
-  
-      
-      
+      return array;
+
+
+
     };
-    chooseCriteria();
-  
+    return chooseCriteria();
+
   };
-  // console.log(lengthPrompt + 'lowercase: ' + lowercasePrompt + 'uppercase: ' + uppercasePrompt + 'numbers: ' + numbersPrompt + 'special chars: ' + specialPrompt)
-  pickNumber();
+
+  return pickNumber();
 }
-
-
-
-
 
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate')
-generateBtn.addEventListener('click', passwordPrompt)
-
-
-
-function generatePassword() {}
-// Write password to the #password input
+generateBtn.addEventListener('click', writePassword)
 
 
 function writePassword() {
-  var password = generatePassword();
+  var password = passwordPrompt();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = 'hello';}
+  passwordText.value = password.join('');
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-
-
-
