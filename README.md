@@ -16,7 +16,7 @@ Click "Generate Password" button to open prompts that let you choose the specifi
 
 ![Website Screenshot](assets/images/website-screenshot.jpg)
 ## Credits
-[David Griffin](https://github.com/Ukarimu1)
+[David Griffin](https://github.com/DavidTJGriffin)
 ## License
 MIT License
 
