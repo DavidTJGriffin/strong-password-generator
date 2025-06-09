@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  background-color: #74BEAB;
 }
 
 html,
@@ -31,7 +32,7 @@ header {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: #83D89E;
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -46,8 +47,16 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #D3E89B;
   height: 2px;
+}
+
+.card-header {
+  background-color: #83D89E;
+}
+
+h2 {
+  background-color: #83D89E;
 }
 
 .card-body {
@@ -55,6 +64,7 @@ header {
 }
 
 .card-footer {
+  background-color: #83D89E;
   text-align: center;
 }
 
@@ -62,7 +72,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #D3E89B;
   height: 2px;
 }
 
@@ -74,7 +84,7 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: #59B198;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
@@ -103,6 +113,7 @@ button[disabled] {
   appearance: none;
   border: none;
   display: block;
+  background-color: #83D89E;
   width: 100%;
   padding-top: 15px;
   padding-left: 15px;
@@ -112,7 +123,7 @@ button[disabled] {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  border: 2px dashed #D3E89B;
   border-radius: 6px;
   resize: none;
   overflow: hidden;
